@@ -28,6 +28,15 @@ while guessNumber != number and guessNumber != 0:
 
 if guessNumber == number:
 	numberList.append(guessNumber)
+	numberList.sort()
+	list = []
+	index = 0
+	while index < len(numberList):
+		if numberList[index] == guessNumber:
+			list.append("*" + str(numberList[index]) + "*")
+		else:
+			list.append(str(numberList[index]))
+		index += 1	
 	print("That's it! Congratulations!")
 	print(output)
-	print(numberList)
+	print(list)
